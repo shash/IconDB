@@ -4,12 +4,13 @@
 {% block list %}
 <p>Style: {{ object.style }}</p>
 <p>Century: {{ object.century }}</p>
+<p>Main Location: <a href="/icon/location/{{ object.locationMaster.id}}">{{ object.locationMaster.commonName }}</a></p>
 <p>Location: {{ object.location }}</p>
 <p>innovations: {{ object.innovations }}</p>
 <p>notes: {{ object.notes }}</p>
-<p>elements: {{ object.elements.name }}</p>
-<p>icon type: {{ object.iconType.name }}</p>
-<p>style: {{ object.iconStyle.name }}</p>
+<p>elements: <a href="/icon/element/{{ object.element.id }}">{{ object.element.name }}</a></p>
+<p>icon type: <a href="/icon/icontype/{{ object.iconType.id }}">{{ object.iconType.name }}</a></p>
+<p>style: <a href="/icon/iconstyle/{{ object.iconStyle.id }}">{{ object.iconStyle.name }}</a></p>
 <h2>Images</h2>
 <ul>
 	{% for img in object.photos.all %}

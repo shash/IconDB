@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Location: {{ object.commonName }}{% endblock %}
+{% block title2 %}Location: {{ object.commonName }}{% endblock %}
+{% block list %}
+<p>Common name: {{ object.commonName }}</p>
+<p>Correct name: {{ object.correctName }}</p>
+<h2>History:</h2>
+<p>{{ object.history }}</p>
+<p>Sung by: {{ object.sungBy }}</p>
+{% endblock %}
