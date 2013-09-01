@@ -3,3 +3,4 @@ db
 *.pot
 *.pyc
 local_settings.py
+*.swp

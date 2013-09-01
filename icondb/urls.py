@@ -1,4 +1,4 @@
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, TemplateView
 from django.conf.urls import patterns, url
 import models
 
@@ -9,6 +9,7 @@ def detailView(base, model):
     return url(base + r'/(?P<pk>\d+)$', DetailView.as_view(model=model))
 
 urlpatterns = patterns('',
+        url(r'^$', TemplateView.as_view(template_name='index.html')),
         listView(r'icons', models.Icon),
         detailView(r'icon', models.Icon),
         detailView(r'image', models.IconImage),
