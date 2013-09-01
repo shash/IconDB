@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}Image: {{ object.caption }}{% endblock %}
+{% block title2 %}{{ object.caption }}{% endblock %}
+{% block list %}
+<p>Source: {{ object.source }}</p>
+
+<img src="{{ object.image.url }}" />
+{% endblock %}

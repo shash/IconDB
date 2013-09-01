@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Icon: {{ object.iconType.name }} at {{ object.location }} {% endblock title %}
+{% block title2 %}{{ object.iconType.name }} at {{ object.location }} {% endblock title2 %}
+{% block list %}
+<p>Style: {{ object.style }}</p>
+<p>Century: {{ object.century }}</p>
+<p>Location: {{ object.location }}</p>
+<p>innovations: {{ object.innovations }}</p>
+<p>notes: {{ object.notes }}</p>
+<p>elements: {{ object.elements.name }}</p>
+<p>icon type: {{ object.iconType.name }}</p>
+<p>style: {{ object.iconStyle.name }}</p>
+<h2>Images</h2>
+<ul>
+	{% for img in object.photos.all %}
+	<li><a href="/icon/image/{{ img.id }}"><img src="{{ img.image.url }}" /></a></li>
+	{% endfor %}
+</ul>
+{% endblock %}
