@@ -21,4 +21,5 @@ urlpatterns = patterns('',
         detailView(r'iconstyle', models.IconStyle),
         listView(r'location', models.LocationMaster),
         detailView(r'location', models.LocationMaster),
+        url('uploadImg', 'icondb.views.uploadImg'),
 )
