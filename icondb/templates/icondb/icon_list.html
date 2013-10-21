@@ -4,7 +4,7 @@
 {% block list %}
 <ul>
 	{% for obj in object_list %}
-	<li><a href="/icon/icon/{{obj.id}}">{{ obj.iconType.name }} at {{ obj.location }}</a></li>
+	<li><a href="/icon/icon/{{obj.id}}">{{ obj.iconType.name }} at {{ obj.site }}</a></li>
 	{% endfor %}
 </ul>
 {% endblock %}
